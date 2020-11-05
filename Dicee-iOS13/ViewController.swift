@@ -18,10 +18,8 @@ class ViewController: UIViewController {
     // It gest executed when the view loads (after the first show up)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         diceImageViewOne.image = #imageLiteral(resourceName: "DiceSix")
-        diceImageViewOne.alpha = 0.5
-        
+        // diceImageViewOne.alpha = 0.5
         diceImageViewTwo.image = #imageLiteral(resourceName: "DiceTwo")
     }
 
@@ -29,12 +27,9 @@ class ViewController: UIViewController {
     // Interface Builder Actions (IB Actions):
     // Code that will be triggered when ac action occurs on this UI element (the button)
     @IBAction func buttonRoll(_ sender: UIButton) {
-        diceImageViewOne.image = #imageLiteral(resourceName: "DiceOne")
-        diceImageViewOne.alpha = 1
-        
-        diceImageViewTwo.image = #imageLiteral(resourceName: "DiceOne")
-        
-        print("Button Roll got tapped.")
+        diceImageViewOne.image = #imageLiteral(resourceName: "DiceFour")
+        diceImageViewTwo.image = #imageLiteral(resourceName: "DiceFour")
+        // print("Button Roll got tapped.")
     }
 }
 
