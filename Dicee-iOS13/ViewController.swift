@@ -26,5 +26,15 @@ class ViewController: UIViewController {
     }
 
 
+    // Interface Builder Actions (IB Actions):
+    // Code that will be triggered when ac action occurs on this UI element (the button)
+    @IBAction func buttonRoll(_ sender: UIButton) {
+        diceImageViewOne.image = #imageLiteral(resourceName: "DiceOne")
+        diceImageViewOne.alpha = 1
+        
+        diceImageViewTwo.image = #imageLiteral(resourceName: "DiceOne")
+        
+        print("Button Roll got tapped.")
+    }
 }
 
