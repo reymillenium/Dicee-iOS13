@@ -15,21 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewOne: UIImageView!
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
+    let dicePossibleValues = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ]
+    
     // It gest executed when the view loads (after the first show up)
     override func viewDidLoad() {
         super.viewDidLoad()
-        diceImageViewOne.image = #imageLiteral(resourceName: "DiceSix")
-        // diceImageViewOne.alpha = 0.5
-        diceImageViewTwo.image = #imageLiteral(resourceName: "DiceTwo")
+                        
     }
 
 
     // Interface Builder Actions (IB Actions):
     // Code that will be triggered when ac action occurs on this UI element (the button)
     @IBAction func buttonRoll(_ sender: UIButton) {
-        diceImageViewOne.image = #imageLiteral(resourceName: "DiceFour")
-        diceImageViewTwo.image = #imageLiteral(resourceName: "DiceFour")
-        // print("Button Roll got tapped.")
+        diceImageViewOne.image = dicePossibleValues.randomElement()
+        diceImageViewTwo.image = dicePossibleValues.randomElement()
     }
 }
 
