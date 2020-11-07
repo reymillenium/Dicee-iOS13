@@ -29,7 +29,8 @@ class ViewController: UIViewController {
     @IBAction func buttonRoll(_ sender: UIButton) {
         diceImageViewOne.image = dicePossibleValues.randomElement()
         // diceImageViewTwo.image = dicePossibleValues.randomElement()
-        diceImageViewTwo.image = dicePossibleValues[Int.random(in: 0...5)]
+//        diceImageViewTwo.image = dicePossibleValues[Int.random(in: 0...5)]
+        diceImageViewTwo.image = dicePossibleValues[Int.random(in: 0..<6)]
     }
 }
 
