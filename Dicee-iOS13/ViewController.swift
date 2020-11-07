@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     // Code that will be triggered when ac action occurs on this UI element (the button)
     @IBAction func buttonRoll(_ sender: UIButton) {
         diceImageViewOne.image = dicePossibleValues.randomElement()
-        diceImageViewTwo.image = dicePossibleValues.randomElement()
+        // diceImageViewTwo.image = dicePossibleValues.randomElement()
+        diceImageViewTwo.image = dicePossibleValues[Int.random(in: 0...5)]
     }
 }
 
